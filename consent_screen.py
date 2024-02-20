@@ -1,5 +1,12 @@
 import tkinter as tk
+from tkinter import ttk
 from tkinter import scrolledtext
+import random
+import pyautogui
+import time
+import os
+import uuid
+import csv
 
 def on_agree():
     # Function for handling agreement to consent
@@ -29,11 +36,10 @@ def setup_consent_screen(root):
     btn_disagree = tk.Button(root, text="I Disagree", command=lambda: on_disagree(root), bg='red', fg='white')
     btn_disagree.pack(side=tk.RIGHT, padx=20)
 
-# This part ensures that the code below doesn't run when this file is imported
-if __name__ == "__main__":
-    root = tk.Tk()
-    root.title("Fitts' Law Experiment: INFORMED CONSENT")
-    root.geometry("700x400")  # width x height
 
-    setup_consent_screen(root)
-    root.mainloop()
+root = tk.Tk()
+root.title("Fitts' Law Experiment: INFORMED CONSENT")
+root.geometry("700x400")  # width x height
+
+setup_consent_screen(root)
+root.mainloop()
