@@ -3,6 +3,8 @@ from tkinter import ttk
 from tkinter import scrolledtext
 from tkinter import PhotoImage  # Import the PhotoImage class from tkinter for images
 from PIL import Image, ImageTk  # Import Image and ImageTk from Pillow for image handling
+# The pip package name and python/import package name do not have to be the same. Since pillow
+# is meant to replace PIL, it uses the same import name for compatibility. PIL is Pillow
 from tkinter import IntVar  # Import IntVar for storing integer values
 import random
 import time
@@ -17,7 +19,7 @@ debugger = True
 
 # Initialize Pygame Mixer
 pygame.mixer.init()
-click_sound = pygame.mixer.Sound("C:/Users/kjpre/OneDrive/Documents/1law/hitmarker_2.mp3")
+click_sound = pygame.mixer.Sound("hitmarker_2.mp3")
 
 # Global variable for the image reference
 global photo1
@@ -104,7 +106,7 @@ participation in this research study. I hereby agree to participate in this rese
     hci_checkbox.place(x=70, y=600)
 
     # Load and display the first image
-    image_path1 = "C:/Users/kjpre/OneDrive/Documents/1law/scroll_down.png"
+    image_path1 = "scroll_down.png"
     image1 = Image.open(image_path1)
     image1 = image1.resize((190, 190))
     global photo1  # Declare photo1 as a global variable to retain it
@@ -113,7 +115,7 @@ participation in this research study. I hereby agree to participate in this rese
     img_label1.place(x=1089, y=150)
 
     # Load and display the second image
-    image_path2 = "C:/Users/kjpre/OneDrive/Documents/1law/click_diagram.png"
+    image_path2 = "click_diagram.png"
     image2 = Image.open(image_path2)
     image2 = image2.resize((430, 160))
     global photo2  # Declare photo2 as a global variable to retain it
@@ -122,7 +124,7 @@ participation in this research study. I hereby agree to participate in this rese
     img_label2.place(x=400, y=470)
 
         # Load and display the third image
-    image_path3 = "C:/Users/kjpre/OneDrive/Documents/1law/HCI.png"
+    image_path3 = "HCI.png"
     image3 = Image.open(image_path3)
     image3 = image3.resize((60, 60))
     global photo3  # Declare photo3 as a global variable to retain it
